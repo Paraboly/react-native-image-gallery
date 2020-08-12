@@ -1,6 +1,7 @@
 import React from "react";
 import { StatusBar } from "react-native";
-import ImageGallery from "@paraboly/react-native-image-gallery";
+// import ImageGallery from "@paraboly/react-native-image-gallery";
+import ImageGallery from "./build/dist/ImageGallery.js";
 
 const defaultDimensions = { width: 1080, height: 1920 };
 const staticImages = [
