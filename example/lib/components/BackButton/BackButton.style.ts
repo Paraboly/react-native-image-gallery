@@ -13,7 +13,7 @@ export default StyleSheet.create<Style>({
     alignSelf: "flex-start",
   },
   imageStyle: {
-    width: 32,
-    height: 32,
+    width: 24,
+    height: 24,
   },
 });

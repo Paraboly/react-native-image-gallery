@@ -14,7 +14,7 @@ interface IProps {}
 interface IState {
   images: IImage[];
   index: number;
-  selectedIndex: number;
+  initialPage: number;
 }
 
 interface IDimensions {
@@ -27,16 +27,13 @@ interface IImage {
   dimensions?: IDimensions;
 }
 
-const defaultDimensions = { width: 1080, height: 1920 };
-
 class ImageGallery extends Component<IProps, IState> {
   constructor(props) {
     super(props);
-    const { navigation } = props;
     this.state = {
-      images: navigation.getParam("images", []),
-      index: navigation.getParam("selectedIndex", 0),
-      selectedIndex: navigation.getParam("selectedIndex", 0),
+      images: props.images,
+      index: props.index,
+      initialPage: props.initialPage,
     };
   }
 
@@ -66,14 +63,14 @@ class ImageGallery extends Component<IProps, IState> {
     const { index, images } = this.state;
     return (
       <SafeAreaView style={styles.headerContainer}>
-        <BackButton />
-        <PageCounter index={index} length={images.length} />
+        <BackButton {...this.props} />
+        <PageCounter index={index} length={images.length} {...this.props} />
       </SafeAreaView>
     );
   };
 
   renderGallerySwiper = () => {
-    const { images, selectedIndex } = this.state;
+    const { images, initialPage } = this.state;
     const medSizeImages = images.map((image: IImage) => {
       const { uri, dimensions, ...args } = image;
       return {
@@ -89,7 +86,7 @@ class ImageGallery extends Component<IProps, IState> {
       <GallerySwiper
         images={medSizeImages}
         initialNumToRender={30}
-        initialPage={selectedIndex}
+        initialPage={initialPage}
         errorComponent={this.renderError}
         onPageSelected={(newIndex) => this.setState({ index: newIndex })}
         {...this.props}

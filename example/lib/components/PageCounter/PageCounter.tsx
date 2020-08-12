@@ -8,8 +8,8 @@ import styles from "./PageCounter.style";
 interface IProps {
   index: number;
   length: number;
-  totalPageTextStyle: TextStyle;
-  currentPageTextStyle: TextStyle;
+  totalPageTextStyle?: TextStyle;
+  currentPageTextStyle?: TextStyle;
 }
 
 const PageCounter = (props: IProps) => {
