@@ -1,14 +1,19 @@
-import { ViewStyle, StyleSheet } from "react-native";
+import { ViewStyle, ImageStyle, StyleSheet } from "react-native";
 
 interface Style {
-  headerBackButtonStyle: ViewStyle;
+  imageStyle: ImageStyle;
+  backButtonStyle: ViewStyle;
 }
 
 export default StyleSheet.create<Style>({
-  headerBackButtonStyle: {
+  backButtonStyle: {
     top: 48,
     left: 24,
     position: "absolute",
     alignSelf: "flex-start",
+  },
+  imageStyle: {
+    width: 32,
+    height: 32,
   },
 });

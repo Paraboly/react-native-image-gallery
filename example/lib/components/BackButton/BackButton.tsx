@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Image } from "react-native";
+import { TouchableOpacity, Image, ViewStyle, ImageStyle } from "react-native";
 /**
  * ? Local Imports
  */
@@ -8,18 +8,26 @@ import styles from "./BackButton.style";
 interface IProps {
   ImageComponent: any;
   backImageSource: any;
+  backButtonStyle: ViewStyle;
+  backButtonImageStyle: ImageStyle;
   onBackButtonPress: () => void;
 }
 
 const BackButton = (props: IProps) => {
-  const { ImageComponent = Image, backImageSource, onBackButtonPress } = props;
+  const {
+    ImageComponent = Image,
+    backImageSource,
+    backButtonStyle,
+    onBackButtonPress,
+    backButtonImageStyle,
+  } = props;
   return (
     <TouchableOpacity
-      style={styles.headerBackButtonStyle}
+      style={[styles.backButtonStyle, backButtonStyle]}
       onPress={onBackButtonPress}
     >
       <ImageComponent
-        style={{ height: 32, width: 32 }}
+        style={[styles.imageStyle, backButtonImageStyle]}
         source={backImageSource}
       />
     </TouchableOpacity>
