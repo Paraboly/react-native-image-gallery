@@ -1,4 +1,12 @@
-export default {
+import { ViewStyle, TextStyle, StyleSheet } from "react-native";
+
+interface Style {
+  container: ViewStyle;
+  totalPageTextStyle: TextStyle;
+  currentPageTextStyle: TextStyle;
+}
+
+export default StyleSheet.create<Style>({
   container: {
     flexDirection: "row",
     alignSelf: "flex-end",
@@ -7,13 +15,13 @@ export default {
     top: 8,
     fontSize: 25,
     marginRight: 8,
-    color: colors.text.white,
+    color: "#fdfdfd",
   },
   totalPageTextStyle: {
     top: 8,
     fontSize: 15,
     marginRight: 24,
+    color: "#fdfdfd",
     fontStyle: "italic",
-    color: colors.text.white,
   },
-};
+});

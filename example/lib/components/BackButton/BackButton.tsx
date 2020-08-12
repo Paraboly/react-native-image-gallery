@@ -15,7 +15,7 @@ interface IProps {
 
 const BackButton = (props: IProps) => {
   const {
-    ImageComponent = Image,
+    ImageComponent,
     backImageSource,
     backButtonStyle,
     onBackButtonPress,
@@ -32,6 +32,10 @@ const BackButton = (props: IProps) => {
       />
     </TouchableOpacity>
   );
+};
+
+BackButton.defaultProps = {
+  ImageComponent: Image,
 };
 
 export default BackButton;
