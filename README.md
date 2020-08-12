@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="React Native Image Gallery"
-        src="assets/Screenshots/React-Native-Image-Gallery.gif" />
+        src="assets/Screenshots/React-Native-Image-Gallery-v3.gif" />
 </p>
 
 # Installation
