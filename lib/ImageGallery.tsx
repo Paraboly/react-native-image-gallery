@@ -18,12 +18,12 @@ interface IState {
   initialPage: number;
 }
 
-interface IDimensions {
+export interface IDimensions {
   width: number | string;
   height: number | string;
 }
 
-interface IImage {
+export interface IImage {
   uri: string;
   caption?: string;
   dimensions?: IDimensions;
