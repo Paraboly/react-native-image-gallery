@@ -2,7 +2,7 @@ import { ViewStyle, TextStyle, ImageStyle, StyleSheet } from "react-native";
 
 interface Style {
   headerContainer: ViewStyle;
-  gradientContainer: ViewStyle;
+  container: ViewStyle;
   captionContainer: ViewStyle;
   captionTextStyle: TextStyle;
   errorContainer: ViewStyle;
@@ -16,8 +16,9 @@ export default StyleSheet.create<Style>({
     position: "absolute",
     justifyContent: "center",
   },
-  gradientContainer: {
+  container: {
     flex: 1,
+    backgroundColor: "#000",
   },
   captionContainer: {
     bottom: 0,

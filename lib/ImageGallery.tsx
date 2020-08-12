@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { Text, View, SafeAreaView } from "react-native";
 import GallerySwiper from "react-native-gallery-swiper";
-import LinearGradient from "react-native-linear-gradient";
 /**
  * ? Local Imports
  */
@@ -9,7 +8,9 @@ import styles from "./ImageGallery.style";
 import BackButton from "./components/BackButton/BackButton";
 import PageCounter from "./components/PageCounter/PageCounter";
 
-interface IProps {}
+interface IProps {
+  Container: any;
+}
 
 interface IState {
   images: IImage[];
@@ -24,10 +25,11 @@ interface IDimensions {
 
 interface IImage {
   uri: string;
+  caption?: string;
   dimensions?: IDimensions;
 }
 
-class ImageGallery extends Component<IProps, IState> {
+class ImageGallery extends React.Component<IProps, IState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -95,15 +97,13 @@ class ImageGallery extends Component<IProps, IState> {
   };
 
   render() {
+    const { Container = View } = this.props;
     return (
-      <LinearGradient
-        style={styles.gradientContainer}
-        colors={["#2C5364", "#203A43", "#0F2027"]}
-      >
+      <Container style={styles.container} {...this.props}>
         {this.renderGallerySwiper()}
         {this.renderHeader()}
         {this.renderCaption()}
-      </LinearGradient>
+      </Container>
     );
   }
 }

@@ -1,8 +1,11 @@
 {
-  "name": "react-native-library-boilerplate",
+  "name": "@paraboly/react-native-image-gallery",
   "version": "0.1.0",
-  "description": "Description for library",
+  "description": "Fully customizable & easy to use Image Gallery for React Native by Paraboly",
   "keywords": [
+    "image",
+    "image-gallery",
+    "swiper",
     "FreakyCoder",
     "freakycoder",
     "kuray",
@@ -14,18 +17,29 @@
     "rn"
   ],
   "homepage": "https://www.freakycoder.com",
-  "bugs": "https://github.com/WrathChaos/react-native-library-boilerplate/issues",
-  "main": "./lib/src/index.js",
-  "repository": "git@github.com:WrathChaos/react-native-library-boilerplate.git",
+  "bugs": "https://github.com/Paraboly/react-native-image-gallery/issues",
+  "main": "./build/dist/ImageGallery.js",
+  "repository": "git@github.com:Paraboly/react-native-image-gallery.git",
   "author": "Kuray (FreakyCoder) <kurayogun@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "cd lib && tsc && cp ../package.json ../build/dist/ && Echo Build completed!",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
   "devDependencies": {
     "eslint": "^7.6.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "eslint-config-airbnb": "^18.2.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "@types/react": "^16.9.22",
+    "@types/react-native": "^0.63.0",
+    "react-native-typescript-transformer": "^1.2.13",
+    "typescript": "^3.7.4"
   },
   "husky": {
     "hooks": {
@@ -40,6 +54,12 @@
   },
   "peerDependencies": {
     "react": ">= 16.x.x",
-    "react-native": ">= 0.55.x"
+    "react-native": ">= 0.55.x",
+    "react-native-gallery-swiper": ">= 1.26.4"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-native": "^0.63.2",
+    "react-native-gallery-swiper": "^1.26.4"
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { TouchableOpacity, Image, ViewStyle, ImageStyle } from "react-native";
 /**
  * ? Local Imports
