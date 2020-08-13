@@ -10,12 +10,12 @@ import PageCounter from "./components/PageCounter/PageCounter";
 
 interface IProps {
   Container: any;
+  initialPage: number;
 }
 
 interface IState {
   images: IImage[];
   index: number;
-  initialPage: number;
 }
 
 export interface IDimensions {
@@ -35,7 +35,6 @@ class ImageGallery extends React.Component<IProps, IState> {
     this.state = {
       images: props.images,
       index: props.index,
-      initialPage: props.initialPage,
     };
   }
 
@@ -77,8 +76,8 @@ class ImageGallery extends React.Component<IProps, IState> {
     return (
       <ImageSwiper
         images={images}
+        initialPage={this.props.initialPage}
         onPageSelected={(newIndex) => this.setState({ index: newIndex })}
-        {...this.props}
       />
     );
   };
