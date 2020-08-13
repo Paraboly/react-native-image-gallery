@@ -10,8 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@freakycoder/react-native-image-swiper": "^0.1.0",
-    "@paraboly/react-native-image-gallery": "^0.2.0",
+    "@freakycoder/react-native-image-swiper": "^0.1.2",
+    "@paraboly/react-native-image-gallery": "^0.2.3",
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-gallery-swiper": "^1.26.4"

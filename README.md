@@ -30,7 +30,7 @@ npm i @paraboly/react-native-image-gallery
 ```js
 "react": ">= 16.x.x",
 "react-native": ">= 0.55.x",
-"@freakycoder/react-native-image-swiper": ">= 0.1.0"
+"@freakycoder/react-native-image-swiper": ">= 0.1.2"
 ```
 
 # Usage

@@ -76,8 +76,8 @@ class ImageGallery extends React.Component<IProps, IState> {
     return (
       <ImageSwiper
         images={images}
-        initialPage={this.props.initialPage}
         onPageSelected={(newIndex) => this.setState({ index: newIndex })}
+        {...this.props}
       />
     );
   };
