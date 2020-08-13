@@ -30,7 +30,7 @@ npm i @paraboly/react-native-image-gallery
 ```js
 "react": ">= 16.x.x",
 "react-native": ">= 0.55.x",
-"react-native-gallery-swiper": ">= 1.26.4"
+"@freakycoder/react-native-image-swiper": ">= 0.1.0"
 ```
 
 # Usage
@@ -82,14 +82,13 @@ const staticImages = [
 | backButtonStyle       |   style   |  default  | change the back button's styling or override                                                                                |
 | backButtonImageStyle  |   style   |  default  | change the back button image' styling or override                                                                           |
 | onBackButtonPress     | function  | undefined | set your own logic when Back Button is pressed                                                                              |
-| index                 |  number   |     1     | manage index of the images                                                                                                  |
-| length                |  number   |     4     | manage lenght of the images                                                                                                 |
 | totalPageTextStyle    |   style   |  default  | set or override your own styling for total page text                                                                        |
 | currentPageTextStyle  |   style   |  default  | set or override your own styling for current page text                                                                      |
 
 ## Future Plans
 
 - [x] ~~LICENSE~~
+- [ ] `initialPage` Feature
 
 ## Credits
 

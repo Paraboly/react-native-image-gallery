@@ -1,7 +1,8 @@
 import React from "react";
 import { StatusBar } from "react-native";
-import ImageGallery from "@paraboly/react-native-image-gallery";
+// import ImageGallery from "@paraboly/react-native-image-gallery";
 // import ImageGallery from "./build/dist/ImageGallery.js";
+import ImageGallery from "./lib/ImageGallery";
 
 const defaultDimensions = { width: 1080, height: 1920 };
 const staticImages = [
@@ -57,7 +58,6 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <ImageGallery
-        initialPage={0}
         images={staticImages}
         backButtonImageSource={backButtonImage}
       />
