@@ -71,13 +71,14 @@ class ImageGallery extends React.Component<IProps, IState> {
     );
   };
 
-  renderGallerySwiper = () => {
+  renderImageSwiper = () => {
     const { images } = this.state;
 
     return (
       <ImageSwiper
         images={images}
         onPageSelected={(newIndex) => this.setState({ index: newIndex })}
+        {...this.props}
       />
     );
   };
@@ -86,7 +87,7 @@ class ImageGallery extends React.Component<IProps, IState> {
     const { Container = View } = this.props;
     return (
       <Container style={styles.container} {...this.props}>
-        {this.renderGallerySwiper()}
+        {this.renderImageSwiper()}
         {this.renderHeader()}
         {this.renderCaption()}
       </Container>
